@@ -1,0 +1,38 @@
+openapi: 3.0.1
+info:
+  title: Python Code Writer Plugin
+  description: A plugin that allows the user to write Python code to a specific directory on their local hard drive. If the directory doesn't exist, it will be created. If no directory is specified, a temporary directory with a random number will be created and the new file will be written into that directory.
+  version: 'v1'
+servers:
+  - url: http://localhost:5003
+paths:
+  /write_code:
+    post:
+      operationId: writeCode
+      summary: Write Python code to a specific directory
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/writeCodeRequest'
+      responses:
+        "200":
+          description: OK
+components:
+  schemas:
+    writeCodeRequest:
+      type: object
+      required:
+      - code
+      properties:
+        code:
+          type: string
+          description: The Python code to write.
+          required: true
+        directory:
+          type: string
+          description: The directory to write to.
+        filename:
+          type: string
+          description: The filename for the new file.

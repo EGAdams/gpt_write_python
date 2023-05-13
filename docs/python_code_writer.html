@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Code Writer Plugin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        code {
+            display: block;
+            white-space: pre-wrap;
+            background-color: #1e1e1e;
+            padding: 10px;
+            border-radius: 5px;
+            color: #d4d4d4;
+            font-family: 'Courier New', monospace;
+        }
+        .keyword {
+            color: #569cd6;
+        }
+        .string {
+            color: #ce9178;
+        }
+        .comment {
+            color: #6a9955;
+        }
+        .function {
+            color: #dcdcaa;
+        }
+        .number {
+            color: #b5cea8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Python Code Writer Plugin</h1>
+    <p>This is a simplified version of your plugin that writes Python code to a specific directory on your local hard drive. If the directory doesn't exist, it should be created. If no directory is specified, a temporary directory with a random number should be created and the new file should be written into that directory.</p>
+    <h2>Code</h2>
+    <code>
+<span class="keyword">import</span> os
+<span class="keyword">import</span> tempfile
+<span class="keyword">import</span> random
+
+<span class="keyword">from</span> quart <span class="keyword">import</span> request, Response
+<span class="keyword">import</span> quart_cors
+<span class="keyword">import</span> quart
+
+app = quart_cors.cors(quart.Quart(__name__), allow_origin="https://chat.openai.com")
+
+@app.post("/write_code")
+<span class="keyword">async def</span> write_code():
+    request_data = <span class="keyword">await</span> quart.request.get_json(force=True)
+    code = request_data.get("code")
+    directory = request_data.get("directory")
+    filename = request_data.get("filename", "code.py")
+
+    <span class="keyword">if not</span> code:
+        <span class="keyword">return</span> Response(response='No code provided', status=400)
+
+    <span class="keyword">if not</span> directory:
+        directory = os.path.join(tempfile.gettempdir(), str(random.randint(1000, 9999)))
+
+    <span class="keyword">if not</span> os.path.exists(directory):
+        os.makedirs(directory)
+
+    file_path = os.path.join(directory, filename)
+
+    <span class="keyword">with</span> open(file_path, 'w') <span class="keyword">as</span> file:
+        file.write(code)
+
+    <span class="keyword">return</span> Response(response=f'Code written to {file_path}', status=200)
+
+<span class="keyword">def</span> main():
+    app.run(debug=True, host="0.0.0.0", port=5003)
+
+<span class="keyword">if</span> __name__ == "__main__":
+    main()
+    </code>
+    <p>This new plugin has a single endpoint, <code>/write_code</code>
+    </code>, which accepts a POST request with a JSON body. The JSON should contain the Python code to write (<code>code</code>), the directory to write to (<code>directory</code>), and an optional filename (<code>filename</code>). If no directory is provided, it creates a new directory in the system's temporary directory with a random number. If the directory doesn't exist, it's created. The Python code is then written to a file in the specified directory.</p>
+    <p><strong>Note:</strong> This is a simple implementation and doesn't include any error handling or security measures. Be careful when using it, as it could potentially overwrite existing files or be used to write files to sensitive areas of your filesystem.</p>
+    
+    </body>
+    </html>
