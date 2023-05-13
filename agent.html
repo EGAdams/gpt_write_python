@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agent System Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Agent System Overview</h1>
+    <p>Our system uses "Agents" as a key component. Here's a general breakdown:</p>
+    <h2>Agents</h2>
+    <p>These are the core of the application logic. They receive user input and a list of previous steps taken, and return either an "AgentAction" or an "AgentFinish". The former corresponds to the tool to use and the input to that tool, while the latter signifies that the agent has completed its task and has information to return to the user.</p>
+    <h2>Tools</h2>
+    <p>These are the actions an agent can take. The tools available to an agent depend on what the agent is designed to do.</p>
+    <h2>Toolkits</h2>
+    <p>These are groups of tools designed for a specific use case. For instance, an agent that needs to interact with a SQL database might need one tool to execute queries and another to inspect tables.</p>
+    <h2>Agent Executor</h2>
+    <p>This wraps an agent and a list of tools. It is responsible for running the agent iteratively until a stopping criterion is met.</p>
+    <h2>Types of Agents</h2>
+    <p>The documentation also distinguishes between two types of agents:</p>
+    <ul>
+        <li><strong>Action Agents</strong>: These agents decide on an action to take and execute that action one step at a time.</li>
+        <li><strong>Plan-and-Execute Agents</strong>: These agents first decide on a plan of actions to take, and then execute those actions one at a time. They are more suitable for complex or long-running tasks.</li>
+    </ul>
+</body>
+</html>
