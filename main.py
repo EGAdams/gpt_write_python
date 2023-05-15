@@ -13,7 +13,7 @@ async def write_code():
     request_data = await quart.request.get_json(force=True)
     code = request_data.get("code")
     directory = request_data.get("directory")
-    filename = request_data.get("filename", "code.py")
+    filename = request_data.get( "filename", "code_file_name.ext" )
 
     if not code:
         return Response(response='No code provided', status=400)

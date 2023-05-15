@@ -1,9 +1,9 @@
 {
   "schema_version": "v1",
-  "name_for_human": "Python Code Writer Plugin (no auth)",
+  "name_for_human": "Code Writer Plugin (no auth)",
   "name_for_model": "code_writer",
-  "description_for_human": "Plugin for writing Python code to a specific directory on the local hard drive. If the directory doesn't exist, it will be created. If no directory is specified, a temporary directory with a random number will be created and the new file will be written into that directory.",
-  "description_for_model": "Plugin for writing Python code to a specific directory on the local hard drive. If the directory doesn't exist, it will be created. If no directory is specified, a temporary directory with a random number will be created and the new file will be written into that directory.",
+  "description_for_human": "Plugin for writing code to a specific directory on the local hard drive. If the directory doesn't exist, it will be created. If no directory is specified, a temporary directory with a random number will be created and the new file will be written into that directory.",
+  "description_for_model": "Plugin for writing code to a specific directory on the local hard drive. If the directory doesn't exist, it will be created. If no directory is specified, a temporary directory with a random number will be created and the new file will be written into that directory.",
   "auth": {
     "type": "none"
   },
