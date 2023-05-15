@@ -1,10 +1,12 @@
 import os
+import subprocess
 import tempfile
 import random
 
 from quart import request, Response
 import quart_cors
 import quart
+# from code_runner import CodeRunner  # assuming the class is in a file named code_runner.py
 
 app = quart_cors.cors(quart.Quart(__name__), allow_origin="https://chat.openai.com")
 
@@ -13,7 +15,7 @@ async def write_code():
     request_data = await quart.request.get_json(force=True)
     code = request_data.get("code")
     directory = request_data.get("directory")
-    filename = request_data.get( "filename", "code_file_name.ext" )
+    filename = request_data.get("filename", "code.py")
 
     if not code:
         return Response(response='No code provided', status=400)
@@ -30,6 +32,11 @@ async def write_code():
         file.write(code)
 
     return Response(response=f'Code written to {file_path}', status=200)
+
+# @app.post("/run_code")
+# async def run_code():
+    # return await CodeRunner.run_code()
+
 
 def main():
     app.run(debug=True, host="0.0.0.0", port=5003)
