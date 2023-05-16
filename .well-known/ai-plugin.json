@@ -1,20 +1,18 @@
 {
   "schema_version": "v1",
-  "name_for_human": "Code Writer Plugin (no auth)",
-  "name_for_model": "code_writer",
-  "description_for_human": "Plugin for writing code to a specific directory on the local hard drive. If the directory doesn't exist, it will be created. If no directory is specified, a temporary directory with a random number will be created and the new file will be written into that directory.",
-  "description_for_model": "Plugin for writing code to a specific directory on the local hard drive. If the directory doesn't exist, it will be created. If no directory is specified, a temporary directory with a random number will be created and the new file will be written into that directory.",
+  "name_for_human": "TODO Plugin",
+  "name_for_model": "todo",
+  "description_for_human": "Plugin for writing code to my local hard drive.",
+  "description_for_model": "Plugin for writing code to my local hard drive.",
   "auth": {
-    "type": "none"
+      "type": "none"
   },
   "api": {
-    "type": "openapi",
-    "url": "http://localhost:5003/openapi.yaml",
-    "is_user_authenticated": false
+      "type": "openapi",
+      "url": "http://localhost:5003/openapi.yaml",
+      "is_user_authenticated": false
   },
   "logo_url": "http://localhost:5003/logo.png",
-  "contact_email": "legal@example.com",
-  "legal_info_url": "http://example.com/legal"
+  "contact_email": "support@example.com",
+  "legal_info_url": "http://www.example.com/legal"
 }
-
-  
