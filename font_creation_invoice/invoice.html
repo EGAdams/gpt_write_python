@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineering Invoice</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Software Engineering Invoice</h1>
+        <div id="invoiceInfo">
+            <div class="infoSection">
+                <h2>DATE: 5/16/2023</h2>
+                <p>NAME: Louis H Adams Jr.</p>
+                <p>Street Address: 15789 Alma Ave Apt A</p>
+                <p>City/State/Zip: Clearwater, FL 33760</p>
+                <p>Phone Number: (813)368-5960</p>
+                <p>Email: eg1972@gmail.com</p>
+                <p>INVOICE NO. 0016</p>
+            </div>
+            <div class="infoSection">
+                <h2>BILL TO:</h2>
+                <p>Contact Name: Roy L. McGreevy</p>
+                <p>Client Company: ScorePro Sports Inc.</p>
+                <p>Address: 11860 Lake Allen Dr.</p>
+                <p>City/State/Zip: Largo, FL 33773</p>
+                <p>Phone Number: (727)466-7975</p>
+                <p>Email: kscbtv@gmail.com</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h2>Project Breakdown</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Tasks</th>
+                    <th>Hours</th>
+                    <th>Cost</th>
+                </tr>
+            </thead>
+            <tbody id="invoiceData">
+                <!-- Invoice data will go here -->
+            </tbody>
+        </table>
+        <br><br>
+        <b>Notes:  </b>All tasks were completed as per the requirements.
+    </main>
+    <button id="printButton">Print Invoice</button>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 25px;
+    padding: 0;
+}
+header {
+    background-color: #4784d8;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+main {
+    padding: 2em;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.total {
+    font-weight: bold;
+    background-color: #f5f8c7;
+    color:  rgba(0, 0, 0, 0.9);
+}
+
+.total_row {
+    font-weight: bold;
+    background-color: rgb(26 115 232 / 90%);
+    color: rgb(255, 255, 255);
+}
+#printButton {
+    background-color: rgb(26 115 232 / 90%);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 2px;
+    cursor: pointer;
+    border-radius: 5px
+}
