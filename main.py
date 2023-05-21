@@ -19,9 +19,31 @@ import quart_cors
 import quart
 # from code_runner import CodeRunner  # assuming the class is in a file named code_runner.py
 
+
+from base_tool import BaseTool
+from python_repl import PythonREPL
+from python_repl_tool import PythonREPLTool
+from python_ast_repl_tool import PythonAstREPLTool
+
 from python_file_executor import PythonFileExecutor
 
 app = quart_cors.cors(quart.Quart(__name__), allow_origin="https://chat.openai.com")
+
+@app.post("/run_python_code")
+async def run_python_code():
+    request_data = await quart.request.get_json(force=True)
+    code = request_data.get("code")
+    tool = PythonREPLTool()
+    result = tool._run(code)
+    return Response(response=result, status=200)
+
+@app.post("/run_python_ast_code")
+async def run_python_ast_code():
+    request_data = await quart.request.get_json(force=True)
+    code = request_data.get("code")
+    tool = PythonAstREPLTool()
+    result = tool._run(code)
+    return Response(response=result, status=200)
 
 @app.post("/write_code")
 async def write_code():
@@ -45,6 +67,23 @@ async def write_code():
         file.write(code)
 
     return Response(response=f'Code written to {file_path}', status=200)
+
+@app.post("/read_file")
+async def read_file():
+    request_data = await quart.request.get_json(force=True)
+    filepath = request_data.get("filepath")
+
+    if not filepath:
+        return Response(response='No filepath provided', status=400)
+
+    if not os.path.exists(filepath):
+        return Response(response=f'File {filepath} does not exist', status=404)
+
+    with open(filepath, 'r') as file:
+        content = file.read()
+
+    return Response(response=content, status=200)
+
 
 
 

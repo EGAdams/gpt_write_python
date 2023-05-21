@@ -1,3 +1,5 @@
+from typing import Dict,Optional
+from base_tool import BaseTool
 class PythonAstREPLTool(BaseTool):
     """A tool for running python code in a REPL."""
 
@@ -12,7 +14,7 @@ class PythonAstREPLTool(BaseTool):
     locals: Optional[Dict] = {}
     sanitize_input: bool = True
 
-    @root_validator(pre=True)
+    # @root_validator(pre=True)
     def validate_python_version(cls, values: Dict) -> Dict:
         """Validate valid python version."""
         if sys.version_info < (3, 9):
