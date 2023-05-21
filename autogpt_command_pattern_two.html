@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Plan</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:nth-child(even) {background-color: #f2f2f2;}
+    </style>
+</head>
+<body>
+    <h1>Our Plan</h1>
+    <p>Our system is like a Lego project, where each piece has a specific role and they all fit together to create something amazing.</p>
+    <table>
+        <tr>
+            <th>Object</th>
+            <th>Responsibilities</th>
+            <th>Analogy</th>
+        </tr>
+        <tr>
+            <td>Command</td>
+            <td>A Command is like a Lego piece. It has a specific shape (method) and a label (name and description) telling us what it does.</td>
+            <td>It's like a Lego brick with a specific shape and label. You can use it to build your Lego project (program).</td>
+        </tr>
+        <tr>
+            <td>CommandRegistry</td>
+            <td>The CommandRegistry is like the Lego baseplate. It holds all the Lego pieces (Commands) and knows where each one is located.</td>
+            <td>It's like a Lego baseplate where you can attach or remove Lego bricks (Commands), or ask a specific brick (Command) to do its job.</td>
+        </tr>
+        <tr>
+            <td>command decorator</td>
+            <td>The command decorator is like a Lego machine that turns a normal object into a Lego piece (Command) that can be used in our Lego project (program).</td>
+            <td>It's like a machine that can turn a normal object into a Lego brick that can be used in your Lego project.</td>
+        </tr>
+    </table>
+</body>
+</html>

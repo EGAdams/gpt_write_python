@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Command Center Explanation</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:nth-child(even) {background-color: #f2f2f2;}
+    </style>
+</head>
+<body>
+    <h1>Command Center Explanation</h1>
+    <p>This page explains our Python command center using the analogy of a LEGO project.</p>
+
+    <h2>Command</h2>
+    <p>In our LEGO project, a <strong>Command</strong> is like a specific LEGO piece. Each piece has:</p>
+    <ul>
+        <li><strong>Name</strong>: The type of the LEGO piece.</li>
+        <li><strong>Description</strong>: What the LEGO piece does in our project.</li>
+        <li><strong>Method</strong>: The actual way we use the LEGO piece in our project.</li>
+    </ul>
+
+    <h2>CommandRegistry</h2>
+    <p>The <strong>CommandRegistry</strong> is like the LEGO project blueprint. It keeps track of all the LEGO pieces (commands) that are available. You can:</p>
+    <ul>
+        <li><strong>Register new commands</strong>: Add new LEGO pieces to the blueprint.</li>
+        <li><strong>Unregister commands</strong>: Remove LEGO pieces from the blueprint.</li>
+        <li><strong>Call a command</strong>: Use a specific LEGO piece in the project.</li>
+    </ul>
+
+    <h2>command decorator</h2>
+    <p>The <strong>command decorator</strong> is like a machine that can turn a normal LEGO piece into a special piece that the blueprint can use. You just take a normal LEGO piece, put it in the machine, and it automatically gets turned into a special piece that the blueprint can recognize and use.</p>
+
+    <h2>Responsibilities</h2>
+    <table>
+        <tr>
+            <th>Object</th>
+            <th>Responsibility</th>
+            <th>Analogy</th>
+        </tr>
+        <tr>
+            <td>Command</td>
+            <td>Perform a specific task or action.</td>
+            <td>A specific LEGO piece.</td>
+        </tr>
+        <tr>
+            <td>CommandRegistry</td>
+            <td>Manage all the commands.</td>
+            <td>The LEGO project blueprint.</td>
+        </tr>
+        <tr>
+            <td>command decorator</td>
+            <td>Turn a normal function into a command.</td>
+            <td>A machine that turns a normal LEGO piece into a special piece.</td>
+        </tr>
+    </table>
+</body>
+</html>

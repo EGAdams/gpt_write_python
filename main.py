@@ -1,3 +1,14 @@
+# 
+# Main Python file: main.py 
+
+# Description:
+# This file is the entry point for your plugin.
+
+# It contains the following methods:
+#   * execute_python_file - Accepts a filename and returns a JSON object.
+#   * write_code - Accepts a code string and writes it to a file.
+# 
+# ``` python
 import os
 import subprocess
 import tempfile
@@ -75,6 +86,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
+#```
