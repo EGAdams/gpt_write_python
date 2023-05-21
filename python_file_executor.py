@@ -1,5 +1,5 @@
 class PythonFileExecutor:
-    @command("execute_python_file", "Execute Python File", '"filename": "<filename>"')
+    # @command("execute_python_file", "Execute Python File", '"filename": "<filename>"')
     def execute_python_file(self, filename: str) -> str:
         """Execute a Python file in a Docker container and return the output
 

@@ -1,7 +1,12 @@
-def we_are_running_in_a_docker_container() -> bool:
-    """Check if we are running in a Docker container
+from quart import Quart, request, jsonify
+from code_writer import PythonFileExecutor
 
-    Returns:
-        bool: True if we are running in a Docker container, False otherwise
-    """
-    return os.path.exists("/.dockerenv")
+app = Quart(__name__)
+executor = PythonFileExecutor()
+
+@app.route('/execute_python_file', methods=['POST'])
+async def execute_python_file():
+    data = await request.get_json()
+    filename = data.get('filename')
+    result = executor.execute_python_file(filename)
+    return jsonify(result)

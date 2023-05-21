@@ -3,28 +3,14 @@ import subprocess
 import tempfile
 import random
 
-from quart import request, Response
+from quart import request, Response, Quart, jsonify
 import quart_cors
 import quart
 # from code_runner import CodeRunner  # assuming the class is in a file named code_runner.py
 
+from python_file_executor import PythonFileExecutor
+
 app = quart_cors.cors(quart.Quart(__name__), allow_origin="https://chat.openai.com")
-
-@app.post("/read_file")
-async def read_file():
-    request_data = await quart.request.get_json(force=True)
-    filepath = request_data.get("filepath")
-
-    if not filepath:
-        return Response(response='No file path provided', status=400)
-
-    if not os.path.exists(filepath):
-        return Response(response='File does not exist', status=404)
-
-    with open(filepath, 'r') as file:
-        content = file.read()
-
-    return Response(response=content, status=200)
 
 @app.post("/write_code")
 async def write_code():
@@ -48,6 +34,18 @@ async def write_code():
         file.write(code)
 
     return Response(response=f'Code written to {file_path}', status=200)
+
+
+
+# app = Quart(__name__)
+# executor = PythonFileExecutor()
+
+# @app.route('/execute_python_file', methods=['POST'])
+# async def execute_python_file():
+#     data = await request.get_json()
+#     filename = data.get('filename')
+#     result = executor.execute_python_file(filename)
+#     return jsonify(result)
 
 # @app.post("/run_code")
 # async def run_code():
@@ -77,3 +75,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
