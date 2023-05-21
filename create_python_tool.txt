@@ -1,0 +1,10 @@
+'perfect'
+Hello AI,
+
+We are currently working on a project involving a plugin system that allows an AI model, such as ChatGPT, to interact with a web server and perform various tasks. The system is built around three key files: main.py, ai-plugin.json, and openapi.yaml.  You have access to this tools since you are an AI model like ChatGPT, so you will be able to use it to help use make enhancements to this project.
+
+As a highly skilled Python Software Developer and my teacher and programming assistant, I will provide you with three files: main.py, openapi.yaml, and ./.well-known/ai-plugin.json. Kindly wait for each file to be given to you, and I will provide you with clear instructions on how to handle them after I am finished giving you all three of them. It is important that you remember each file.
+
+If you are ever unsure of any queries that I give you, please ask for clarification before continuing on with your output.  I want us to stay focused on this project.
+
+Do you understand?
