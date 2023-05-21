@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Agent Class Documentation</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+h1, h2, h3 {
+  color: #333;
+}
+pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+}
+</style>
+</head>
+<body>
+<h1>Agent Class</h1>
+<p>The Agent class is used for interacting with Auto-GPT.</p>
+<h2>Attributes:</h2>
+<ul>
+  <li><strong>ai_name:</strong> The name of the agent.</li>
+  <li><strong>memory:</strong> The memory object to use.</li>
+  <li><strong>full_message_history:</strong> The full message history.</li>
+  <li><strong>next_action_count:</strong> The number of actions to execute.</li>
+  <li><strong>system_prompt:</strong> The system prompt is the initial prompt that defines everything the AI needs to know to achieve its task successfully.</li>
+  <li><strong>triggering_prompt:</strong> The last sentence the AI will see before answering.</li>
+</ul>
+<h2>Methods:</h2>
+<h3>__init__:</h3>
+<p>Initializes the Agent class with the provided parameters.</p>
+<pre>
+__init__(
+  self,
+  ai_name,
+  memory,
+  full_message_history,
+  next_action_count,
+  command_registry,
+  config,
+  system_prompt,
+  triggering_prompt,
+  workspace_directory,
+)
+</pre>
+<h3>start_interaction_loop:</h3>
+<p>Begins the interaction loop for the agent.</p>
+<pre>
+start_interaction_loop(self)
+</pre>
+<h3>_resolve_pathlike_command_args:</h3>
+<p>Resolves path-like command arguments.</p>
+<pre>
+_resolve_pathlike_command_args(self, command_args)
+</pre>
+<h3>get_self_feedback:</h3>
+<p>Generates a feedback response based on the provided thoughts dictionary.</p>
+<pre>
+get_self_feedback(self, thoughts: dict, llm_model: str) -> str
+</pre>
+</body>
+</html>
