@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
-        "openapi",
+        "arun",
+        "dockerenv",
+        "jsonify",
         "todos"
     ],
     "lldb.library": "/Users/clay/Downloads/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB"

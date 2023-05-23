@@ -1,54 +1,90 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 25px;
+    margin: 0;
     padding: 0;
+    color: black;
+    background-color: white;
 }
+
 header {
     background-color: #4784d8;
     color: white;
     text-align: center;
     padding: 1em;
 }
+
+#invoiceInfo {
+    
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    padding: 1em;
+    text-align: left;
+}
+
+.infoSection {
+    background-color: #f2f2f2;
+    padding: 1em;
+    border-radius: 5px;
+}
+
 main {
     padding: 2em;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 1em;
 }
+
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
+
 th {
     background-color: #f2f2f2;
     font-weight: bold;
 }
+
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+
 .total {
+    /* align text to the right */
     font-weight: bold;
     background-color: #f5f8c7;
-    color:  rgba(0, 0, 0, 0.9);
+    color: rgb(0, 0, 0);
 }
 
 .total_row {
+    text-align: right;
     font-weight: bold;
-    background-color: rgb(26 115 232 / 90%);
+    background-color: #4784d8;
     color: rgb(255, 255, 255);
 }
-#printButton {
-    background-color: rgb(26 115 232 / 90%);
+
+button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 20px auto;
+    background-color: #4784d8;
     color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 20px 2px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 5px
+    font-size:20px;
+    margin-bottom: 18px;
+    align: left;
+    float: left;
+    margin-left: 20px;
+}
+
+button:hover {
+    background-color: #316cbe;
 }

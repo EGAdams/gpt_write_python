@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AgentManager Class Documentation</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+h1, h2, h3 {
+  color: #333;
+}
+pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+}
+.table-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.table-grid div {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.table-grid div:nth-child(2n) {
+  background-color: #f4f4f4;
+}
+</style>
+</head>
+<body>
+<h1>AgentManager Class</h1>
+<p>The AgentManager class is used for managing GPT agents.</p>
+<h2>Attributes:</h2>
+<div class="table-grid">
+  <div><strong>next_key:</strong></div>
+  <div>The next key to be assigned to a new agent.</div>
+  <div><strong>agents:</strong></div>
+  <div>A dictionary of agents, where each key-value pair represents an agent and its associated information.</div>
+  <div><strong>cfg:</strong></div>
+  <div>The configuration object.</div>
+</div>
+<h2>Methods:</h2>
+<h3>__init__:</h3>
+<p>Initializes the AgentManager class. This method doesn't require any parameters.</p>
+<pre>
+__init__(self)
+</pre>
+<h3>create_agent:</h3>
+<p>Creates a new agent and returns its key. This method requires three parameters: task, prompt, and model. The task is the task to perform, the prompt is the prompt to use, and the model is the model to use. The method returns the key of the new agent.</p>
+<pre>
+create_agent(self, task: str, prompt: str, model: str) -> tuple[int, str]
+</pre>
+<h3>message_agent:</h3>
+<p>Sends a message to an agent and returns its response. This method requires two parameters: key and message. The key is the key of the agent to message, and the message is the message to send to the agent. The method returns the agent's response.</p>
+<pre>
+message_agent(self, key: str | int, message: str) -> str
+</pre>
+<h3>list_agents:</h3>
+<p>Returns a list of all agents. This method doesn't require any parameters. The method returns a list of tuples of the form (key, task).</p>
+<pre>
+list_agents(self) -> list[tuple[str | int, str]]
+</pre>
+<h3>delete_agent:</h3>
+<p>Deletes an agent from the agent manager. This method requires one parameter: key. The key is the key of the agent to delete. The method returns True if successful, False otherwise.</p>
+<pre>
+delete_agent(self, key: str | int) -> bool
+</pre>
+<h2>Usage with Agent Class:</h2>
+<p>The AgentManager class can be used in conjunction with the Agent class to manage multiple instances of the Agent class. Here's a simple example:</p>
+<pre>
+# Create an instance of the AgentManager class
+agent_manager = AgentManager()
+# Create an agent
+key, response = agent_manager.create_agent(task='task', prompt='prompt', model='model')
+# Send a message to the agent
+response = agent_manager.message_agent(key=key, message='message')
+</pre>
+</body>
+</html>

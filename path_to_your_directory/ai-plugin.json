@@ -1,0 +1,24 @@
+{
+    "name": "Code Writer Plugin",
+    "version": "1.0.0",
+    "endpoints": [
+        {
+            "route": "/write_code",
+            "method": "POST",
+            "action": "writeCode",
+            "description": "Write code to a specific directory"
+        },
+        {
+            "route": "/read_file",
+            "method": "POST",
+            "action": "readFile",
+            "description": "Read a file from a specific path"
+        },
+        {
+            "route": "/execute_python_file",
+            "method": "POST",
+            "action": "executePythonFile",
+            "description": "Execute a Python file"
+        }
+    ]
+}
