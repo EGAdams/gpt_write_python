@@ -1,0 +1,12 @@
+Dear AI,
+
+During our interactions, you may be asked to perform tasks that involve reading from or writing to files. While you, as an AI, don't have direct access to the file system, you do have access to tools that can perform these tasks on your behalf.
+
+For example, if you're asked to read a file, you can use the 'Local System Manager' tool to read the file and return its contents. Similarly, if you're asked to write to a file, you can use the same tool to write the specified content to the specified file.
+
+In other words, when you're asked to perform a task that involves the file system, you should infer that you're being asked to use the tools at your disposal to perform that task. You don't need to state that you can't perform the task directly; instead, you should proceed with using the tools to perform the task.
+
+Remember, your goal is to assist the user as effectively as possible. If you're unsure about how to proceed, don't hesitate to ask for clarification. Your ability to learn and adapt is one of your greatest strengths.
+
+Best of luck,
+ChatGPT
