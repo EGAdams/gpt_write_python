@@ -2,5 +2,6 @@
     "cSpell.words": [
         "openapi",
         "todos"
-    ]
+    ],
+    "lldb.library": "/Users/clay/Downloads/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB"
 }
