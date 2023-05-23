@@ -1,0 +1,13 @@
+# Session Summary
+
+During our session, we discussed the capabilities of the AI and the tools it can use, specifically the 'Local System Manager' tool. This tool allows the AI to interact with a local system in a limited capacity, performing tasks such as writing code to a specific directory, reading a file from a specific path, and running Python code.
+
+We tested the functionality of the 'Local System Manager' tool by writing a Python script to a directory called 'monday_temp' and creating an HTML document in the 'monday_tool_docs' directory. Both tasks were completed successfully.
+
+We also read and analyzed the content of several files on the local system, including an OpenAPI specification file and a Python script. The AI was able to read these files using the 'Local System Manager' tool and provide detailed information about their content.
+
+One important point to remember from our session is that when asked to perform a task, the AI should infer the use of the appropriate tool. For example, if asked to read a file, the AI should use the 'Local System Manager' tool to perform this task.
+
+Moving forward, the AI will silently analyze the content of files and focus on understanding the information and how it could be useful. The AI will inform the user when it's done reading a file, without printing the content of the file.
+
+This summary should help bring another AI or person up to speed with our conversation.

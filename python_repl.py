@@ -1,5 +1,8 @@
 from typing import Dict,Optional
-import os
+import logging_code
+import sys
+from io import StringIO
+
 class PythonREPL:
     """A class for running Python code in a REPL."""
 
@@ -8,5 +11,13 @@ class PythonREPL:
         self._locals = _locals if _locals is not None else {}
 
     def run(self, code: str) -> str:
-        exec(code, self._globals, self._locals)
-        return str(self._locals)
+        old_stdout = sys.stdout
+        redirected_output = sys.stdout = StringIO()
+        try:
+            exec(code, self._globals, self._locals)
+        finally:
+            sys.stdout = old_stdout
+        result = redirected_output.getvalue()
+        logging_code.logger.warning(f'PythonREPL.run executed with code: {code}')
+        logging_code.logger.error(f'PythonREPL.run executed with result: {result}')
+        return result
