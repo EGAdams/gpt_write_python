@@ -34,7 +34,11 @@ async def run_python_code():
     request_data = await quart.request.get_json(force=True)
     code = request_data.get("code")
     tool = PythonREPLTool()
+    # change to the current directory before running code
+    os.chdir(os.path.dirname(__file__))
     result = tool._run(code)
+    response = Response( response=result, status=200)
+    print( "response", response )
     return Response(response=result, status=200)
 
 @app.post("/run_python_ast_code")
@@ -45,44 +49,44 @@ async def run_python_ast_code():
     result = tool._run(code)
     return Response(response=result, status=200)
 
-@app.post("/write_code")
-async def write_code():
-    request_data = await quart.request.get_json(force=True)
-    code = request_data.get("code")
-    directory = request_data.get("directory")
-    filename = request_data.get("filename", "code.py")
+# @app.post("/write_code")
+# async def write_code():
+#     request_data = await quart.request.get_json(force=True)
+#     code = request_data.get("code")
+#     directory = request_data.get("directory")
+#     filename = request_data.get("filename", "code.py")
 
-    if not code:
-        return Response(response='No code provided', status=400)
+#     if not code:
+#         return Response(response='No code provided', status=400)
 
-    if not directory:
-        directory = os.path.join(tempfile.gettempdir(), str(random.randint(1000, 9999)))
+#     if not directory:
+#         directory = os.path.join(tempfile.gettempdir(), str(random.randint(1000, 9999)))
 
-    if not os.path.exists(directory):
-        os.makedirs(directory)
+#     if not os.path.exists(directory):
+#         os.makedirs(directory)
 
-    file_path = os.path.join(directory, filename)
+#     file_path = os.path.join(directory, filename)
 
-    with open(file_path, 'w') as file:
-        file.write(code)
+#     with open(file_path, 'w') as file:
+#         file.write(code)
 
-    return Response(response=f'Code written to {file_path}', status=200)
+#     return Response(response=f'Code written to {file_path}', status=200)
 
-@app.post("/read_file")
-async def read_file():
-    request_data = await quart.request.get_json(force=True)
-    filepath = request_data.get("filepath")
+# @app.post("/read_file")
+# async def read_file():
+#     request_data = await quart.request.get_json(force=True)
+#     filepath = request_data.get("filepath")
 
-    if not filepath:
-        return Response(response='No filepath provided', status=400)
+#     if not filepath:
+#         return Response(response='No filepath provided', status=400)
 
-    if not os.path.exists(filepath):
-        return Response(response=f'File {filepath} does not exist', status=404)
+#     if not os.path.exists(filepath):
+#         return Response(response=f'File {filepath} does not exist', status=404)
 
-    with open(filepath, 'r') as file:
-        content = file.read()
+#     with open(filepath, 'r') as file:
+#         content = file.read()
 
-    return Response(response=content, status=200)
+#     return Response(response=content, status=200)
 
 
 

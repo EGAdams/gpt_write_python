@@ -1,3 +1,4 @@
+import os
 from typing import Dict,Optional
 from base_tool import BaseTool
 from python_repl import PythonREPL
@@ -19,6 +20,9 @@ class PythonREPLTool(BaseTool):
         """Use the tool."""
         if self.sanitize_input:
             query = query.strip().strip("```")
+            print( "query", query )
+            output = self.python_repl.run(query)
+            print ( "output", output )
         return self.python_repl.run(query)
 
     async def _arun(self, query: str) -> str:

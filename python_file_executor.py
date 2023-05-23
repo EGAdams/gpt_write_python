@@ -1,3 +1,7 @@
+import os
+import subprocess
+
+
 class PythonFileExecutor:
     # @command("execute_python_file", "Execute Python File", '"filename": "<filename>"')
     def execute_python_file(self, filename: str) -> str:
@@ -9,7 +13,7 @@ class PythonFileExecutor:
         Returns:
             str: The output of the file
         """
-        logger.info(f"Executing file '{filename}'")
+        # # logger.info(f"Executing file '{filename}'")
 
         if not filename.endswith(".py"):
             return "Error: Invalid file type. Only .py files are allowed."
@@ -31,19 +35,21 @@ class PythonFileExecutor:
             image_name = "python:3-alpine"
             try:
                 client.images.get(image_name)
-                logger.warn(f"Image '{image_name}' found locally")
+                ## logger.warn(f"Image '{image_name}' found locally")
             except ImageNotFound:
-                logger.info(
-                    f"Image '{image_name}' not found locally, pulling from Docker Hub"
-                )
+                # # logger.info(
+                #     f"Image '{image_name}' not found locally, pulling from Docker Hub"
+                # )
                 low_level_client = docker.APIClient()
                 for line in low_level_client.pull(image_name, stream=True, decode=True):
                     status = line.get("status")
                     progress = line.get("progress")
                     if status and progress:
-                        logger.info(f"{status}: {progress}")
+                        # logger.info(f"{status}: {progress}")
+                        print( f"{status}: {progress}" )
                     elif status:
-                        logger.info(status)
+                        # logger.info(status)
+                        print( status )
             container = client.containers.run(
                 image_name,
                 f"python {Path(filename).relative_to(CFG.workspace_path)}",
@@ -66,9 +72,9 @@ class PythonFileExecutor:
             return logs
 
         except docker.errors.DockerException as e:
-            logger.warn(
-                "Could not run the script in a container. If you haven't already, please install Docker https://docs.docker.com/get-docker/"
-            )
+            # logger.warn(
+            #     "Could not run the script in a container. If you haven't already, please install Docker https://docs.docker.com/get-docker/"
+            # )
             return f"Error: {str(e)}"
 
         except Exception as e:

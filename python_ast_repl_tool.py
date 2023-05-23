@@ -1,5 +1,6 @@
 from typing import Dict,Optional
 from base_tool import BaseTool
+import os
 class PythonAstREPLTool(BaseTool):
     """A tool for running python code in a REPL."""
 
@@ -37,6 +38,7 @@ class PythonAstREPLTool(BaseTool):
             module_end = ast.Module(tree.body[-1:], type_ignores=[])
             module_end_str = ast.unparse(module_end)  # type: ignore
             try:
+                print( "evaluating python code... ")
                 return eval(module_end_str, self.globals, self.locals)
             except Exception:
                 old_stdout = sys.stdout
