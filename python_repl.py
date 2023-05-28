@@ -8,8 +8,9 @@ class PythonREPL:
     """A class for running Python code in a REPL."""
 
     def __init__(self, _globals: Optional[Dict] = None, _locals: Optional[Dict] = None):
-        self._globals = _globals if _globals is not None else {}
+        self._globals = _globals if _globals is not None else {'os': os}
         self._locals = _locals if _locals is not None else {}
+
 
     def run(self, code: str) -> str:
         old_stdout = sys.stdout
