@@ -2,6 +2,7 @@ from typing import Dict,Optional
 import logging_code
 import sys
 from io import StringIO
+import os
 
 class PythonREPL:
     """A class for running Python code in a REPL."""
@@ -13,8 +14,9 @@ class PythonREPL:
     def run(self, code: str) -> str:
         old_stdout = sys.stdout
         redirected_output = sys.stdout = StringIO()
+        code = "import os\n" + code
         try:
-            exec(code, self._globals, self._locals)
+            exec( code, self._globals, self._locals )
         finally:
             sys.stdout = old_stdout
         result = redirected_output.getvalue()

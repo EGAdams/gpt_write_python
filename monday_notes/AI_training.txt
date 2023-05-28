@@ -13,7 +13,7 @@ During our interactions, you may be asked to perform tasks that involve reading 
 
 For example, if you're asked to read a file or write a Python script, you can use the "Python Executor" plugin tool to perform these tasks. This tool can read files, write files, and even execute Python code on the local system.
 
-As another example, if I ask you to read a file at the path: "/home/adamsl/gpt_write_python/openapi.yaml", Just please infer that I am assuming that you will use the "Python Executor" plugin tool for that purpose.  This will help us communicate better.  So from now on, don't say you can't do it, just use the tools that you have available.
+As another example, if I ask you to read a file at the path: "C:Users/eg197/langchain/gpt_server/openapi.yaml", Just please infer that I am assuming that you will use the "Python Executor" plugin tool for that purpose.  This will help us communicate better.  So from now on, don't say you can't do it, just use the tools that you have available.
 
 When you're asked to perform a task that involves the file system or executing code, you should infer that you're being asked to use the tools at your disposal to perform that task. You don't need to state that you can't perform the task directly; instead, you should proceed with using the tools to perform the task.
 

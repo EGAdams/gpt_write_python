@@ -17,6 +17,7 @@ app = quart_cors.cors(quart.Quart(__name__), allow_origin="https://chat.openai.c
 
 @app.post("/run_python_code")
 async def run_python_code():
+    print( "calling PythonCodeRunner.run_python_code... " )
     return await PythonCodeRunner.run_python_code()
 
 @app.post("/run_python_ast_code")
