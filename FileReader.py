@@ -1,8 +1,6 @@
 import os
 import logging_code
-
 from quart import request, Response
-
 
 class FileReader:
     @staticmethod
