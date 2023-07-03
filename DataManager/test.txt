@@ -1,0 +1,233 @@
+.
+├── Assets.xcassets
+│   ├── AppIcon.appiconset
+│   │   └── Contents.json
+│   ├── Contents.json
+│   ├── bubble_blue.imageset
+│   │   ├── Contents.json
+│   │   └── bubble_blue@2x.png
+│   ├── bubble_gray.imageset
+│   │   ├── Contents.json
+│   │   └── bubble_gray@2x.png
+│   ├── calls.imageset
+│   │   ├── Contents.json
+│   │   └── calls@3x.png
+│   ├── donald_trump_profile.imageset
+│   │   ├── Contents.json
+│   │   └── donald_trump_profile.png
+│   ├── gandhi.imageset
+│   │   ├── Contents.json
+│   │   └── gandhi.png
+│   ├── groups.imageset
+│   │   ├── Contents.json
+│   │   └── groups@3x.png
+│   ├── hillary_profile.imageset
+│   │   ├── Contents.json
+│   │   └── hillary_profile.jpg
+│   ├── people.imageset
+│   │   ├── Contents.json
+│   │   └── people@3x.png
+│   ├── recent.imageset
+│   │   ├── Contents.json
+│   │   └── recent@3x.png
+│   ├── settings.imageset
+│   │   ├── Contents.json
+│   │   └── settings@3x.png
+│   ├── steve_profile.imageset
+│   │   ├── Contents.json
+│   │   └── steve_profile.png
+│   └── zuckprofile.imageset
+│       ├── Contents.json
+│       ├── anon.jpeg
+│       ├── anon.png
+│       ├── zuckprofile.jpg
+│       └── zuckprofilereal.png
+├── Model.xcdatamodeld
+│   └── Model.xcdatamodel
+│       └── contents
+├── assets.tar
+├── mLibrary
+│   ├── AddGeotificationViewController.swift
+│   ├── AdminStringToJsonConverter.swift
+│   ├── Ajax.swift
+│   ├── AskTheExpert
+│   │   ├── Base.lproj
+│   │   │   ├── LaunchScreen.storyboard
+│   │   │   └── Main.storyboard
+│   │   ├── BaseCell.swift
+│   │   ├── BlankController.swift
+│   │   ├── ChatLogController.swift
+│   │   ├── ChatLogController_old.swift
+│   │   ├── ChatLogTabController.swift
+│   │   ├── ChatMessage+CoreDataClass.swift
+│   │   ├── ChatMessage+CoreDataProperties.swift
+│   │   ├── ChatMessage.swift
+│   │   ├── ChatMessageDataSender.swift
+│   │   ├── ChatViewController.swift
+│   │   ├── CustomTabBarController.swift
+│   │   ├── Friend+CoreDataClass.swift
+│   │   ├── Friend+CoreDataProperties.swift
+│   │   ├── Friend.swift
+│   │   ├── FriendsControllerHelper.swift
+│   │   ├── Info.plist
+│   │   ├── InputSetupComponents.swift
+│   │   ├── Message+CoreDataClass.swift
+│   │   ├── Message.swift
+│   │   ├── MessageCell.swift
+│   │   ├── Model.xcdatamodeld
+│   │   │   └── Model.xcdatamodel
+│   │   │       └── contents
+│   │   └── SendHandler.swift
+│   ├── Assets.xcassets
+│   │   ├── AppIcon.appiconset
+│   │   │   └── Contents.json
+│   │   ├── Contents.json
+│   │   ├── anon.imageset
+│   │   │   ├── Contents.json
+│   │   │   └── anon.jpeg
+│   │   ├── backButton.imageset
+│   │   │   ├── Contents.json
+│   │   │   └── backButton.png
+│   │   ├── bubble_blue.imageset
+│   │   │   ├── Contents.json
+│   │   │   └── bubble_blue@2x.png
+│   │   ├── bubble_gray.imageset
+│   │   │   ├── Contents.json
+│   │   │   └── bubble_gray_upside_down@2x.png
+│   │   ├── bubble_gray_old.imageset
+│   │   │   ├── Contents.json
+│   │   │   └── bubble_gray@2x.png
+│   │   ├── calls.imageset
+│   │   │   ├── Contents.json
+│   │   │   └── calls@3x.png
+│   │   ├── donald_trump_profile.imageset
+│   │   │   ├── Contents.json
+│   │   │   └── donald_trump_profile.png
+│   │   ├── gandhi.imageset
+│   │   │   ├── Contents.json
+│   │   │   └── gandhi.png
+│   │   ├── groups.imageset
+│   │   │   ├── Contents.json
+│   │   │   └── groups@3x.png
+│   │   ├── hillary_profile.imageset
+│   │   │   ├── Contents.json
+│   │   │   └── hillary_profile.jpg
+│   │   ├── people.imageset
+│   │   │   ├── Contents.json
+│   │   │   └── people@3x.png
+│   │   ├── recent.imageset
+│   │   │   ├── Contents.json
+│   │   │   └── recent@3x.png
+│   │   ├── settings.imageset
+│   │   │   ├── Contents.json
+│   │   │   └── settings@3x.png
+│   │   ├── steve_profile.imageset
+│   │   │   ├── Contents.json
+│   │   │   └── steve_profile.png
+│   │   └── zuckprofile.imageset
+│   │       ├── Contents.json
+│   │       └── zuckprofile.jpg
+│   ├── Base.lproj
+│   │   ├── Info.plist alias
+│   │   ├── LaunchScreen.xib
+│   │   ├── mcbaStoryboard.storyboard
+│   │   ├── mcbaStoryboard_mini.storyboard
+│   │   └── temp.storyboard
+│   ├── ChatLogMessageCell.swift
+│   ├── ChatViewControllerPresenter.swift
+│   ├── ChatViewController_delete.swift
+│   ├── CountDownLock.swift
+│   ├── DataManager.swift
+│   ├── DataProcessor.swift
+│   ├── DefaultsPrinter.swift
+│   ├── ErrorLoggingScriptMessageHandler.swift
+│   ├── Extends.swift
+│   ├── FetchedResultsControllerManager.swift
+│   ├── FinalizeLogin.swift
+│   ├── Geotification.swift
+│   ├── GeotificationsViewController.swift
+│   ├── GetAdminInfo.swift
+│   ├── GetMessageList.swift
+│   ├── HtmlChatButtonClickHandler.swift
+│   ├── HttpClientApi.swift
+│   ├── Images.xcassets
+│   │   ├── AppIcon.appiconset
+│   │   │   ├── Contents.json
+│   │   │   ├── Icon-App-20x20@1x-1.png
+│   │   │   ├── Icon-App-20x20@2x-1.png
+│   │   │   ├── Icon-App-20x20@2x.png
+│   │   │   ├── Icon-App-20x20@3x.png
+│   │   │   ├── Icon-App-29x29@1x.png
+│   │   │   ├── Icon-App-29x29@2x-1.png
+│   │   │   ├── Icon-App-29x29@2x.png
+│   │   │   ├── Icon-App-29x29@3x.png
+│   │   │   ├── Icon-App-40x40@1x-1.png
+│   │   │   ├── Icon-App-40x40@2x-1.png
+│   │   │   ├── Icon-App-40x40@2x.png
+│   │   │   ├── Icon-App-40x40@3x.png
+│   │   │   ├── Icon-App-60x60@2x.png
+│   │   │   ├── Icon-App-60x60@3x.png
+│   │   │   ├── Icon-App-76x76@1x.png
+│   │   │   ├── Icon-App-76x76@2x.png
+│   │   │   ├── Icon-App-83.5x83.5@2x.png
+│   │   │   └── ItunesArtwork@2x.png
+│   │   ├── Contents.json
+│   │   └── LaunchImage.launchimage
+│   │       ├── 1536x2048.png
+│   │       ├── 768x1024.png
+│   │       └── Contents.json
+│   ├── Info.plist
+│   ├── JavaScriptLogger.swift
+│   ├── JavascriptInterface.swift
+│   ├── LibraryDelegate.swift
+│   ├── LogWriter.swift
+│   ├── MCBA-Bridging-Header.h
+│   ├── MCBA_basecopy_dev.cer
+│   ├── Map
+│   │   ├── Address.swift
+│   │   └── Map.swift
+│   ├── McbaURLProtocol.swift
+│   ├── McbaUpdateManager.swift
+│   ├── MessageCreator.swift
+│   ├── NetworkRequestor.swift
+│   ├── Printer.swift
+│   ├── Reachability.swift
+│   ├── RewardsViewController.swift
+│   ├── SignInScriptMessageHandler.swift
+│   ├── SignInViewController.swift
+│   ├── SpinnerFactory.swift
+│   ├── SpinnerViewController.swift
+│   ├── StringToJsonConverter.swift
+│   ├── SwapIdsInCustomerDatabase.swift
+│   ├── TokenRefreshNotification.swift
+│   ├── UIUpdater.swift
+│   ├── UserLoginService.swift
+│   ├── Utilities.swift
+│   ├── ViewController.swift
+│   ├── WKWebViewExtensions.swift
+│   ├── WebContentHandler.swift
+│   ├── get_admin_info_test.swift
+│   ├── global.swift
+│   ├── init.js
+│   ├── jsinterface_notes.swift
+│   ├── mLibrary.h
+│   ├── need_javascript_print.swift
+│   ├── notes.swift
+│   ├── originalViewController.swift
+│   ├── shopController.swift
+│   └── test.html
+├── mLibrary.xcodeproj
+│   ├── project.pbxproj
+│   ├── xcshareddata
+│   │   └── xcschemes
+│   │       └── mLibrary.xcscheme
+│   └── xcuserdata
+│       └── clay.xcuserdatad
+│           └── xcschemes
+│               └── xcschememanagement.plist
+├── testModel.xcdatamodeld
+│   └── testModel.xcdatamodel
+│       └── contents
+└── version.txt
+
+52 directories, 179 files

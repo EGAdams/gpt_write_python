@@ -1,8 +1,10 @@
 {
     "cSpell.words": [
+        "arun",
         "dockerenv",
         "jsonify",
+        "mystdout",
         "todos"
     ],
-    "liveServer.settings.port": 5501
+    "lldb.library": "/Users/clay/Downloads/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB"
 }

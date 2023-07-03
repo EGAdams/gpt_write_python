@@ -1,3 +1,4 @@
+import os
 from typing import Dict,Optional
 from base_tool import BaseTool
 from python_repl import PythonREPL
